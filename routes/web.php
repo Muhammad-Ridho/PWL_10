@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controller\MahasiswaController;
+use App\Http\Controllers\MahasiswaController;
 use Illuminate\Http\Request;
 
 /*
@@ -19,4 +19,4 @@ use Illuminate\Http\Request;
 //     return view('welcome');
 // });
 
-Route::resource('mahasiswa', MahasiswaController::class);
+Route::resource('mahasiswas', MahasiswaController::class);
