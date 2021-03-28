@@ -64,7 +64,7 @@ class MahasiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($Nim)
     {
         //
         //menampilkan detail data dengan menemukan/berdasarkan Nim Mahasiswa
@@ -79,7 +79,7 @@ class MahasiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($Nim)
     {
         //
         //menampilkan detail data dengan menemukan berdasarkan Nim Mahasiswa untuk diedit
@@ -94,7 +94,7 @@ class MahasiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $Nim)
     {
         //
         //melakukan validasi data
@@ -119,7 +119,7 @@ class MahasiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($Nim)
     {
         //
         //fungsi eloquent untuk menghapus data
