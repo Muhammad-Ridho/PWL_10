@@ -13,10 +13,10 @@ class AddEmailTanggallahirToMahasiswasTable extends Migration
      */
     public function up()
     {
-        Schema::table('mahasiswas', function (Blueprint $table) {
-            $table->string('email')->after('No_Handphone');
-            $table->date('tanggal_lahir')->after('email');
-        });
+        // Schema::table('mahasiswas', function (Blueprint $table) {
+        //     $table->string('email')->after('No_Handphone');
+        //     $table->date('tanggal_lahir')->after('email');
+        // });
     }
 
     /**
@@ -26,8 +26,8 @@ class AddEmailTanggallahirToMahasiswasTable extends Migration
      */
     public function down()
     {
-        Schema::table('mahasiswas', function (Blueprint $table) {
-            //
-        });
+        // Schema::table('mahasiswas', function (Blueprint $table) {
+        //     //
+        // });
     }
 }
