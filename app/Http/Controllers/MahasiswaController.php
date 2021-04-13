@@ -35,8 +35,8 @@ class MahasiswaController extends Controller
 
     public function store(Request $request)
     {
-        //melakukan validasi data
-        $request->validate([
+       //melakukan validasi data
+       $request->validate([
         'Nim' => 'required',
         'Nama' => 'required',
         'Kelas' => 'required',
