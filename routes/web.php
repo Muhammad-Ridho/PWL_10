@@ -1,25 +1,33 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MahasiswaController;
-use App\Http\Controllers\CariMahasiswaController;
-use Illuminate\Http\Request;
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+class AddEmailTanggallahirToMahasiswasTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('mahasiswas', function (Blueprint $table) {
+            $table->string('email')->after('No_Handphone');
+            $table->date('tanggal_lahir')->after('email');
+        });
+    }
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::resource('mahasiswas', MahasiswaController::class);
-
-Route::get('mahasiswas/nilai/{mahasiswa}', [MahasiswaController::class, 'nilai'])->name('mahasiswas.showNilai');
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('mahasiswas', function (Blueprint $table) {
+            //
+        });
+    }
+}
