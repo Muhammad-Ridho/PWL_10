@@ -30,7 +30,7 @@ class MahasiswaController extends Controller
     public function create()
     {
         $kelas = Kelas::all();
-        return view('mahasiswas.create', compact('kelas'));
+        return view('mahasiswas.create', ['kelas' => $kelas]);
     }
 
     public function store(Request $request)
