@@ -42,7 +42,7 @@
 
         <td>{{ $Mahasiswa->Nim }}</td>
         <td>{{ $Mahasiswa->Nama }}</td>
-        <td>{{ $Mahasiswa->Kelas }}</td>
+        <td>{{ $Mahasiswa->Kelas->nama_kelas }}</td>
         <td>{{ $Mahasiswa->Jurusan }}</td>
         <td>{{ $Mahasiswa->No_Handphone }}</td>
         <td>{{ $Mahasiswa->email }}</td>
@@ -55,6 +55,7 @@
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger">Delete</button>
+                <a class="btn btn-warning" href="{{ route('mahasiswas.showNilai', $Mahasiswa->Nim) }}">Nilai</a>
             </form>
         </td>
     </tr>
